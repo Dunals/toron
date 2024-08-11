@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+        html,
+        body {
+            margin: 0;
+            width: 100%;
+            font-family: "Open Sans", sans-serif;
+            letter-spacing: .5px;
+            line-height: 2;
+            background-color: #f7f8fa;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Droid Sans", sans-serif;
+            font-weight: 500;
+            clear: both;
+            color: #666666;
+        }
+
+        h1 {
+            font-size: 30px;
+            line-height: 1.4;
+            margin: 0.2em auto;
+        }
+
+        h2 {
+            border-bottom: 3px solid #CFB997;
+        }
+
+        p,
+        li,
+        strong {
+            font-weight: 300;
+            font-size: 16px;
+            color: #666666;
+            font-family: "Droid Sans", sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            margin: 0;
+            color: #666666;
+        }
+
+        .tags a {
+            color: #fff;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            margin: 1em 0;
+            display: table;
+            border: 1px solid #333333;
+            font-size: 15px;
+        }
+
+        td,
+        th {
+            padding: 12px 20px;
+            text-align: left;
+            border-left: 1px solid #333333;
+        }
+
+        th {
+            background-color: #333333;
+            color: #666666;
+            font-weight: 500;
+        }
+
+        tr {
+            border-bottom: 1px solid #333333;
+            font-weight: 300;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #F5F6FB;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fff;
+        }
+
+        .banner {
+            font-size: 23px;
+            color: #fff;
+            font-weight: 500;
+            background: #333333;
+            height: 60px;
+            margin: 0;
+            top: 0;
+            z-index: 1;
+            display: block;
+            position: sticky;
+            position: -webkit-sticky;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #fff;
+            font-weight: 300;
+            background: #333333;
+            height: 60px;
+            border-top: 0px solid red;
+            margin: 2em 0 0 0;
+        }
+
+        .content {
+            margin: 0 auto;
+            width: 80%;
+        }
+
+      
+
+        .right-box {
+            float: left;
+            width: 300px;
+            margin: 0 0;
+            background-color: #eaedf2;
+            border-radius: 6px;
+        }
+.right-box h3{text-align: center;}
+.post-card { padding-bottom: 1em; margin-bottom: 1em; padding: 20px 30px; border: 1px solid #ddd; border-radius: 5px; background: #f9f9f9;}
+
+        .card-title {
+            font-family: "Public Sans", sans-serif;
+            font-size: 22px;
+            line-height: 1.4;
+            font-weight: 600;
+            text-transform: capitalize;
+            margin: 0.2em auto;
+        }
+
+        .logo {
+            display: inline-block;
+            cursor: pointer;
+            float: left;
+        }
+
+        .wrp {
+            margin: 3em 0;
+        }
+
+        .tags {
+            font-size: 15px;
+            background: #666666;
+            padding: 5px 15px;
+            margin: 4px 3px;
+            display: inline-block;
+            text-align: center;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        .copy-txt {
+            height: 60px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .click_4,
+        .click_5 {
+            display: none;
+        }
+
+        .xantwp {
+            font-size: 16px;
+            font-weight: 400;
+            color: #fff;
+            padding: 10px 0;
+            border-bottom: 1px solid #fff;
+        }
+
+        .logo_2 {
+            display: none;
+            font-size: 22px;
+            font-weight: 500;
+            color: #fff;
+            margin: 0 0;
+            cursor: pointer;
+        }
+
+        .homee {
+            float: left;
+            font-size: 16px;
+            font-weight: 400;
+            color: #fff;
+            margin: 0 0 0 20px;
+        }
+
+        .homee a {
+            color: #fff;
+        }
+
+        .xantwp a {
+            color: #fff;
+        }
+
+        .table-cell {
+            display: table-cell;
+            vertical-align: middle;
+            height: 60px;
+            width: 100%;
+        }
+
+        .logo-box {
+            float: left;
+        }
+
+        .menu-box {
+            float: right;
+        }
+
+        .clear {
+            clear: both;
+        }
+        .pagination {
+        display: flex;
+        justify-content: left;
+        margin-top: 20px;
+        }
+
+        .pagination a {
+            padding: 1px 14px;
+            margin: 0 5px;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            cursor: pointer;
+        }
+
+        .pagination a:hover {
+            background-color: #ddd;
+        }
+
+        .pagination a.active {
+            background-color: #666666;
+            color: white;
+        }
+        @media screen and (max-width:960px) {
+            .content {
+                width: 92%;
+            }
+
+            .left-box
+            {
+                margin: 1em auto;
+                width: 98%;
+            }
+
+            h1,
+            .card-title {
+                font-size: 25px;
+            }
+
+            .click_5 {
+                display: block;
+                width: 100%;
+                padding: 0 0;
+                margin-top: 0;
+                background-color: #CFB997;
+                margin-bottom: -4em;
+                border-top: 1px solid #fff;
+            }
+
+            .logo_2 {
+                display: block;
+            }
+
+            .homee {
+                display: none;
+            }
+        }
+</style>
+<title>torontocanadabiz</title>
+<meta name="description" content="torontocanadabiz, Seek insights from fellow writers to enhance your skills through our article submission platform." />
+<meta name="google-site-verification" content="lW4gAPHmchVZmtteB4EoHfIbpa2WVYMOTcVvRbxQxd0" />
+<link rel="canonical" href="https://torontocanadabiz.online" />
+<link rel="alternate" href="https://torontocanadabiz.online" hreflang="en" />
+<link rel="alternate" href="https://torontocanadabiz.online" hreflang="x-default" />  
+
+<meta property="og:site_name" content="PowerWaxPro" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://torontocanadabiz.online" />
+<meta property="og:title" content="PowerWaxPro" />
+<meta property="og:description" content="torontocanadabiz, Seek insights from fellow writers to enhance your skills through our article submission platform." />
+    
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<script type='text/javascript'>function click_2() { var x = document.getElementById("click_3"); if (x.className === "click_4") { x.className += " click_5"; } else { x.className = "click_4"; }}</script>
+</head>
+<body>
+<div class="banner">
+<div class="content">
+<div class="logo-box">
+<div class="table-cell">
+<div class="logo">&#10048; torontocanadabiz</div>
+</div>
+</div>
+<div class="menu-box">
+<div class="table-cell">
+<div class="homee"><a title="Home  | torontocanadabiz" href="/">Home</a></div>
+<div class="homee"><a title="About | torontocanadabiz" href="doc/about/">About</a></div>
+<div class="homee"><a title="Contact Us | torontocanadabiz" href="doc/contact/">Contact Us</a></div>
+<div class="logo_2" onclick="click_2()">&#9776;</div>
+</div>
+</div>
+</div>
+</div>
+<div class="click_4" id="click_3">
+<div class="xantwp"><div class="content"><a title="Home  | torontocanadabiz" href="/">Home</a></div></div>
+<div class="xantwp"><div class="content"><a title="About | torontocanadabiz" href="doc/about/">About</a></div></div>
+<div class="xantwp"><div class="content"><a title="Privacy Policy  | torontocanadabiz" href="doc/privacy-policy/">Privacy Policy</a></div></div>
+</div>
+<div class="content">
+<div class="wrp">
+    
+
+<div class="clear"></div>
+<div class="left-box">
+  <div class="post-card">
+      <div class="card-title">
+          <a title="Three Ways USA Banks Make Money" href="three-ways-usa-banks-make-money.html">Three Ways USA Banks Make Money</a>
+      </div>
+      <p>Understanding how banks make money can help you make better financial decisions and comprehend the broader economic system. USA banks, like other financial institutions worldwide...</p>
+      <div class="tags">
+          <a title="Understanding how banks make money can help you make better financial decisions and comprehend the broader economic system. USA banks" href="three-ways-usa-banks-make-money.html">Continue Reading &#10095;</a>
+      </div>
+  </div>
+  <div class="post-card">
+    <div class="card-title">
+        <a title="Where is the Outer Banks?" href="where-is-the-outer-banks.html">Where is the Outer Banks?</a>
+    </div>
+    <p>The Outer Banks, often referred to as OBX, is a popular vacation destination known for its stunning beaches, rich history, and scenic landscapes. But...</p>
+    <div class="tags">
+        <a title="The Outer Banks, often referred to as OBX, is a popular vacation destination known for its stunning beaches, rich history, and scenic landscapes. But" href="where-is-the-outer-banks.html">Continue Reading &#10095;</a>
+    </div>
+</div>
+<div class="post-card">
+  <div class="card-title">
+      <a title="Why Are Banks Closed Today?" href="why-are-banks-closed-today.html">Why Are Banks Closed Today?</a>
+  </div>
+  <p>Banks can be closed for various reasons, and it can be inconvenient when you need to access your bank account or complete banking transactions....</p>
+  <div class="tags">
+      <a title="Banks can be closed for various reasons, and it can be inconvenient when you need to access your bank account or complete banking transactions." href="why-are-banks-closed-today.html">Continue Reading &#10095;</a>
+  </div>
+</div>
+<div class="post-card">
+  <div class="card-title">
+      <a title="Three Ways USA Banks Make Money" href="three-ways-banks-make-money.html">Three Ways USA Banks Make Money</a>
+  </div>
+  <p>Banks play a crucial role in the economy by providing financial services to individuals and businesses. But how do banks make money? Here are three....</p>
+  <div class="tags">
+      <a title="Banks play a crucial role in the economy by providing financial services to individuals and businesses. But how do banks make money? Here are three" href="three-ways-banks-make-money.html">Continue Reading &#10095;</a>
+  </div>
+</div>
+<div class="post-card">
+  <div class="card-title">
+      <a title="What Holidays Are Banks Closed in 2023?" href="bank-holidays-2023.html">What Holidays Are Banks Closed in 2023?</a>
+  </div>
+  <p>Banks in the United States observe several holidays throughout the year when they are closed to the public. Here is a list of the holidays in 2023 when most banks....</p>
+  <div class="tags">
+      <a title="Banks in the United States observe several holidays throughout the year when they are closed to the public. Here is a list of the holidays in 2023 when most banks" href="bank-holidays-2023.html">Continue Reading &#10095;</a>
+  </div>
+</div>
+</div>
+<div class="clear"></div>
+
+</div>
+<div class="clear"></div>
+</div>
+
+</div>
+</div>
+<div class="clear"></div>
+<div class="footer"><div class="content"><div class="copy-txt">&copy; 2024 torontocanadabiz, Inc. All Rights Reserved. <a title="sitemap  | PowerWaxPro" href="sitemap.xml">sitemap</a></div></div></div>
+</html>
